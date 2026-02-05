@@ -5,11 +5,23 @@
     {
       "src": "*.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "*.pdf",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/report\\.html",
+      "dest": "/report.html"
+    },
+    {
+      "src": "/report\\.pdf",
+      "dest": "/report.pdf"
+    },
+    {
+      "src": "/$",
       "dest": "/index.html"
     }
   ]
